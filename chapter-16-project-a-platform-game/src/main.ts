@@ -1,4 +1,6 @@
+import { DOMDisplay } from "./models/DOMDisplay";
 import { Level } from "./models/Level";
+import { State } from "./models/State";
 import "./style.css";
 
 let simpleLevelPlan = `
@@ -13,4 +15,6 @@ let simpleLevelPlan = `
 ......................`;
 
 let simpleLevel = new Level(simpleLevelPlan);
-console.log(`${simpleLevel.width} by ${simpleLevel.height}`);
+let display = new DOMDisplay(document.body, simpleLevel);
+
+display.syncState(State.start(simpleLevel));

@@ -1,5 +1,6 @@
 import type { Actor } from "./Actor";
 import { Level } from "./Level";
+import type { Player } from "./Player";
 
 type Status = "playing" | "won" | "lost";
 
@@ -19,6 +20,6 @@ export class State {
   }
 
   get player() {
-    return this.actors.find((a) => a.type === "player");
+    return this.actors.find((a) => a.type === "player") as Player;
   }
 }

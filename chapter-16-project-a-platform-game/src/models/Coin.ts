@@ -6,7 +6,8 @@ export class Coin extends Actor {
   wobble: number;
 
   constructor(pos: Vec, basePos: Vec, wobble: number) {
-    super(pos);
+    super(pos, new Vec(0.6, 0.6));
+
     this.basePos = basePos;
     this.wobble = wobble;
   }
@@ -21,5 +22,3 @@ export class Coin extends Actor {
     return new Coin(basePos, basePos, Math.random() * Math.PI * 2);
   }
 }
-
-Coin.prototype.size = new Vec(0.6, 0.6);

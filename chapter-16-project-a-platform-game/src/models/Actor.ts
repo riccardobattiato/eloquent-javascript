@@ -2,10 +2,11 @@ import type { Vec } from "./Vec";
 
 export abstract class Actor {
   pos: Vec;
-  size!: Vec;
+  size: Vec;
 
-  constructor(pos: Vec) {
+  constructor(pos: Vec, size: Vec) {
     this.pos = pos;
+    this.size = size;
   }
 
   abstract get type(): string;

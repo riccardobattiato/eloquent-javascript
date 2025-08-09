@@ -5,7 +5,7 @@ export class Player extends Actor {
   speed: Vec;
 
   constructor(pos: Vec, speed: Vec) {
-    super(pos);
+    super(pos, new Vec(0.8, 1.5));
     this.speed = speed;
   }
 
@@ -17,6 +17,3 @@ export class Player extends Actor {
     return new Player(pos.plus(new Vec(0, -0.5)), new Vec(0, 0));
   }
 }
-
-// size is the same for all instances of Player
-Player.prototype.size = new Vec(0.8, 1.5);

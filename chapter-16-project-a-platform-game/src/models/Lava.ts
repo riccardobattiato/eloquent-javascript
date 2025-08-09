@@ -6,7 +6,7 @@ export class Lava extends Actor {
   reset?: Vec;
 
   constructor(pos: Vec, speed: Vec, reset?: Vec) {
-    super(pos);
+    super(pos, new Vec(1, 1));
     this.speed = speed;
     this.reset = reset;
   }
@@ -27,5 +27,3 @@ export class Lava extends Actor {
     }
   }
 }
-
-Lava.prototype.size = new Vec(1, 1);
