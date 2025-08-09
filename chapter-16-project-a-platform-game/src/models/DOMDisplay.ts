@@ -17,7 +17,7 @@ export class DOMDisplay {
     if (this.actorLayer) this.actorLayer.remove();
     this.actorLayer = drawActors(state.actors);
     this.dom.appendChild(this.actorLayer);
-    this.dom.classList.add(`game ${state.status}`);
+    this.dom.className = `game ${state.status}`;
     this.scrollPlayerIntoView(state);
   }
 
